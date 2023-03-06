@@ -15,7 +15,7 @@ const Button = (props) => {
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	onClick: PropTypes.func,
-	type: PropTypes.string.isRequired,
+	type: PropTypes.oneOf(["fill", "stroke", "text", "icon"]).isRequired,
 };
 
 Button.defaultProps = {

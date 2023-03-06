@@ -4,6 +4,7 @@
 		"module": "commonjs",
 		"target": "es6",
 		"moduleResolution": "node",
+		"types": ["node", "@types/aria-query"],
 		"paths": {
 			"@components": ["./components/index"],
 			"@utils": ["./utils/index"],

@@ -4,6 +4,14 @@ import Button from "./Button";
 export default {
 	title: "Atoms/Button",
 	component: Button,
+	argTypes: {
+		type: {
+			control: {
+				type: "select",
+				options: ["fill", "stroke", "text", "icon"],
+			},
+		},
+	},
 };
 
 const Template = (args) => <Button {...args}>{args.children}</Button>;
@@ -24,4 +32,10 @@ export const TextButton = Template.bind({});
 TextButton.args = {
 	type: "text",
 	children: "Click Here",
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+	type: "icon",
+	children: "▶",
 };

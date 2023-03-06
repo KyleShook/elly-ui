@@ -8,7 +8,7 @@ const ButtonStyles = styled.button`
 	padding: 10px 20px;
 	font-weight: 600;
 	display: block;
-	min-width: 125px;
+	/* min-width: 125px; */
 	border: none;
 	transition: color 0.3s, background 0.3s;
 	font-size: ${fontSize.small};
@@ -49,6 +49,18 @@ const ButtonStyles = styled.button`
 
 			&:hover {
 				background: #f5f5f5;
+			}
+		`}
+
+	/* Icon button styles */
+	${(props) =>
+		props.type === "icon" &&
+		css`
+			background-color: ${colors.primary};
+			color: ${colors.white};
+
+			&:hover {
+				background-color: ${colors.black};
 			}
 		`}
 
