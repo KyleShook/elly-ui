@@ -5,7 +5,7 @@ const ButtonStyles = styled.button`
 	/* Default button styles */
 	background-color: ${colors.white};
 	cursor: pointer;
-	padding: 10px 20px;
+	padding: 8px 16px;
 	font-weight: 600;
 	display: block;
 	/* min-width: 125px; */
