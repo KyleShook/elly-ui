@@ -1,13 +1,13 @@
 {
 	"private": true,
-	"name": "nextjs-skeleton-boilerplate",
+	"name": "elly-ui",
 	"version": "1.0.0",
 	"author": {
 		"name": "Kyle Shook"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/KyleShook/nextjs-skeleton-boilerplate.git"
+		"url": "git+https://github.com/KyleShook/elly-ui"
 	},
 	"scripts": {
 		"dev": "next dev",
@@ -63,9 +63,9 @@
 		"webpack": "^5.75.0"
 	},
 	"bugs": {
-		"url": "https://github.com/KyleShook/nextjs-skeleton-boilerplate/issues"
+		"url": "https://github.com/KyleShook/elly-ui/issues"
 	},
 	"readme": "ERROR: No README data found!",
-	"homepage": "https://github.com/KyleShook/nextjs-skeleton-boilerplate#readme",
-	"_id": "nextjs-skeleton-boilerplate@1.0.0"
+	"homepage": "https://github.com/KyleShook/elly-ui#readme",
+	"_id": "elly-ui@1.0.0"
 }

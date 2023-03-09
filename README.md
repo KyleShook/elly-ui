@@ -19,8 +19,8 @@ Jest / React Testing Library
 ✅ Icon position  
 ✅ Loading state  
 🛠 A11y audit  
-🛠 Button shape (rounded, square, pill)
-🛠 Custom styles
+🛠 Button shape (rounded, square, pill)  
+🛠 Custom styles  
 🛠 Test coverage
 
 ### Button Group
