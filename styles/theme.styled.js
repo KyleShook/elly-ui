@@ -21,14 +21,16 @@ export const colors = {
 	tertiary: "#1c5e9f",
 	white: "#fff",
 	black: "#000",
+	gray: "#ccc",
+	darkGray: "#3a3a3a",
 	transparent: "transparent",
 };
 export const fontSize = {
 	small: "14px",
-	medium: "18px",
-	large: "24px",
-	xlarge: "30px",
-	xxl: "36px",
-	xxxl: "42px",
+	medium: "16px",
+	large: "20px",
+	xlarge: "24px",
+	xxl: "28px",
+	xxxl: "32px",
 };
 export const width = {};

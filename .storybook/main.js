@@ -6,6 +6,7 @@ module.exports = {
 			__dirname,
 			"../styles/theme.styled.js"
 		);
+
 		return config;
 	},
 	stories: [
@@ -23,4 +24,5 @@ module.exports = {
 		builder: "@storybook/builder-webpack5",
 		disableTelemetry: true,
 	},
+	staticDirs: ["../public"],
 };

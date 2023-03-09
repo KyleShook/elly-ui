@@ -12,7 +12,7 @@ export default function Home() {
 
 	return (
 		<StyledSection>
-			<Button>Click Me</Button>
+			<Button leftIcon>Click Me</Button>
 			<Button type="stroke">Click Me</Button>
 			<Button type="text">Click Me</Button>
 		</StyledSection>
