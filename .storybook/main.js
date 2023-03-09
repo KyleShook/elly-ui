@@ -4,7 +4,7 @@ module.exports = {
 	webpackFinal: async (config) => {
 		config.resolve.alias["@theme"] = path.resolve(
 			__dirname,
-			"../styles/theme.styled.js"
+			"../styles/theme.styled.tsx"
 		);
 
 		return config;
@@ -25,4 +25,14 @@ module.exports = {
 		disableTelemetry: true,
 	},
 	staticDirs: ["../public"],
+	typescript: {
+		check: false,
+		checkOptions: {},
+		reactDocgen: "react-docgen-typescript",
+		reactDocgenTypescriptOptions: {
+			shouldExtractLiteralValuesFromEnum: true,
+			propFilter: (prop) =>
+				prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+		},
+	},
 };

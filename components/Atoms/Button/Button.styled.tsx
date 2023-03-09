@@ -1,36 +1,49 @@
 import styled, { css } from "styled-components";
 import { colors, fontSize } from "@theme";
 
-const buttonSizeStyles = {
-	small: css`
-		font-size: ${fontSize.small};
-		padding: 6px 12px;
-		min-width: ${(props) => (props.loading ? "92.5px" : "auto")};
-	`,
-	medium: css`
-		font-size: ${fontSize.medium};
-		padding: 8px 16px;
-		min-width: ${(props) => (props.loading ? "110px" : "auto")};
-	`,
-	large: css`
-		font-size: ${fontSize.medium};
-		padding: 10px 20px;
-		min-width: ${(props) => (props.loading ? "118px" : "auto")};
-	`,
+type ButtonProps = {
+	size: "small" | "medium" | "large";
+	btnType: "fill" | "stroke" | "text" | "icon";
+	fullWidth?: boolean;
+	focusColor?: string;
+	isLoading?: boolean;
+	disabled?: boolean;
 };
 
+type IconProps = {
+	left?: boolean;
+	right?: boolean;
+};
+
+const buttonSizeStyles = {
+	small: css<ButtonProps>`
+		font-size: ${fontSize.small};
+		padding: 6px 12px;
+		min-width: ${(props) => (props.isLoading ? "92.5px" : "auto")};
+	`,
+	medium: css<ButtonProps>`
+		font-size: ${fontSize.medium};
+		padding: 8px 16px;
+		min-width: ${(props) => (props.isLoading ? "110px" : "auto")};
+	`,
+	large: css<ButtonProps>`
+		font-size: ${fontSize.medium};
+		padding: 10px 20px;
+		min-width: ${(props) => (props.isLoading ? "118px" : "auto")};
+	`,
+};
 const buttonTypeStyles = {
-	fill: css`
+	fill: css<ButtonProps>`
 		background-color: ${colors.primary};
 		color: ${colors.white};
 		border: none;
 
 		&:hover {
 			background-color: ${(props) =>
-				props.loading ? colors.primary : colors.black};
+				props.isLoading ? colors.primary : colors.black};
 		}
 	`,
-	stroke: css`
+	stroke: css<ButtonProps>`
 		background-color: ${colors.transparent};
 		color: ${colors.secondary};
 		border: 2px solid ${colors.secondary};
@@ -40,7 +53,7 @@ const buttonTypeStyles = {
 			color: ${colors.white};
 		}
 	`,
-	text: css`
+	text: css<ButtonProps>`
 		background-color: ${colors.transparent};
 		color: ${colors.tertiary};
 
@@ -48,7 +61,7 @@ const buttonTypeStyles = {
 			background: #f5f5f5;
 		}
 	`,
-	icon: css`
+	icon: css<ButtonProps>`
 		background-color: ${colors.primary};
 		color: ${colors.white};
 
@@ -57,10 +70,10 @@ const buttonTypeStyles = {
 		}
 	`,
 };
-
-export const ButtonStyles = styled.button`
+export const ButtonStyles = styled.button<ButtonProps>`
 	/* Default button styles */
-	background-color: ${colors.white};
+	background-color: red;
+	/* background-color: ${colors.white}; */
 	cursor: pointer;
 	font-weight: 600;
 	display: flex;
@@ -69,13 +82,13 @@ export const ButtonStyles = styled.button`
 	border: none;
 	transition: color 0.3s, background-color 0.3s;
 	width: ${(props) => (props.fullWidth ? "100%" : "auto")};
-	cursor: ${(props) => (props.loading ? "default" : "pointer")};
+	cursor: ${(props) => (props.isLoading ? "default" : "pointer")};
 
 	/* Button size styles */
 	${({ size }) => buttonSizeStyles[size]}
 
 	/* Button type styles */
-  	${({ type }) => buttonTypeStyles[type]}
+  	${({ btnType }) => buttonTypeStyles[btnType]}
 
 
 	/* Button focus styles */
@@ -98,16 +111,19 @@ export const ButtonStyles = styled.button`
 			}
 		`}
 `;
-
-export const IconStyles = styled.span`
+export const IconStyles = styled.span<IconProps>`
 	display: flex;
 
-	${({ iconPos }) =>
-		iconPos === "left"
-			? css`
-					margin: 0 0.3rem 0 0;
-			  `
-			: css`
-					margin: 0 0 0 0.3rem;
-			  `}
+	${(props) =>
+		props.left &&
+		css`
+			margin-right: 0.3rem;
+		`}
+
+	${(props) =>
+		props.right &&
+		css`
+			margin-left: 0.3rem;
+		`}
 `;
+//# sourceMappingURL=Button.styled.js.map

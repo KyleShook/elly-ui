@@ -42,3 +42,8 @@ logs
 dist/storybook
 dist/docs
 /stories
+
+.next/
+
+.npmrc
+

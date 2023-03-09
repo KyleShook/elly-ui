@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalStyle } from "../styles/global.styled";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../styles/theme.styled.js";
+import { theme } from "../styles/theme.styled.tsx";
 // import * as NextImage from "next/image";
 
 // const OriginalNextImage = NextImage.default;

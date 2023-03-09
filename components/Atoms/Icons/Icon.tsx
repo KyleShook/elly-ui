@@ -1,16 +1,25 @@
-import React from "react";
+import { FC } from "react";
 import { AnimatedLoadingIconContainer } from "./Icon.styled";
+interface IconProps {
+	left?: boolean;
+	right?: boolean;
+	isLoading?: boolean;
+}
 
-const Icon = ({ left, right, loading }) => {
+const Icon: FC<IconProps> = ({
+	left = false,
+	right = false,
+	isLoading = false,
+}) => {
 	return (
 		<>
-			{loading && (
+			{isLoading && (
 				<AnimatedLoadingIconContainer>
 					<LoadingIcon />
 				</AnimatedLoadingIconContainer>
 			)}
-			{!loading && left && !right && <LeftArrowIcon />}
-			{!loading && right && !left && <RightArrowIcon />}
+			{!isLoading && left && !right && <LeftArrowIcon />}
+			{!isLoading && right && !left && <RightArrowIcon />}
 		</>
 	);
 };
