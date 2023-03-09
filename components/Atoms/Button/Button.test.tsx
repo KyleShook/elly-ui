@@ -15,7 +15,11 @@ afterEach(() => {
 
 describe("Button", () => {
 	test("renders with type 'fill' prop and styles", () => {
-		const { getByText } = render(<Button btnType="fill">Fill Button</Button>);
+		const { getByText } = render(
+			<Button onClick={() => {}} btnType="fill">
+				Fill Button
+			</Button>
+		);
 
 		expect(getByText("Fill Button")).toBeInTheDocument();
 
@@ -27,7 +31,9 @@ describe("Button", () => {
 
 	test("renders with btnType 'stroke' prop and styles", () => {
 		const { getByText } = render(
-			<Button btnType="stroke">Stroke Button</Button>
+			<Button onClick={() => {}} btnType="stroke">
+				Stroke Button
+			</Button>
 		);
 
 		expect(getByText("Stroke Button")).toBeInTheDocument();
@@ -40,7 +46,11 @@ describe("Button", () => {
 	});
 
 	test("renders with btnType 'text' prop and styles", () => {
-		const { getByText } = render(<Button btnType="text">Text Button</Button>);
+		const { getByText } = render(
+			<Button onClick={() => {}} btnType="text">
+				Text Button
+			</Button>
+		);
 
 		expect(getByText("Text Button")).toBeInTheDocument();
 

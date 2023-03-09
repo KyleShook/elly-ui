@@ -19,12 +19,18 @@ const customConfig = {
 	moduleNameMapper: {
 		"^@components/(.*)$": "<rootDir>/components/$1",
 		"^@utils/(.*)$": "<rootDir>/utils/$1",
-		"^@theme$": "<rootDir>/styles/theme.styled.js",
+		"^@theme$": "<rootDir>/styles/theme.styled.tsx",
+		"^@/(.*)$": "<rootDir>/$1",
 	},
 	// A list of paths to modules that run some code to configure or set up the testing framework before each test
 	setupFilesAfterEnv: ["./jest.setup.js"],
 	// By default jest will use a node environment, so DOM elements (like document) will be undefined without this
 	testEnvironment: "jsdom",
+	moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+	transform: {
+		"^.+\\.(ts|tsx)$": "babel-jest",
+	},
+	preset: "ts-jest",
 };
 
 module.exports = createJestConfig(customConfig);

@@ -13,8 +13,7 @@ interface ButtonProps {
 	fullWidth?: boolean;
 	leftIcon?: boolean;
 	rightIcon?: boolean;
-	loading?: boolean;
-	iconPos?: boolean;
+	isLoading?: boolean;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -28,7 +27,7 @@ const Button: FC<ButtonProps> = (props) => {
 		fullWidth = false,
 		leftIcon = false,
 		rightIcon = false,
-		loading = false,
+		isLoading = false,
 	} = props;
 
 	return (
@@ -39,18 +38,18 @@ const Button: FC<ButtonProps> = (props) => {
 			focusColor={focusColor}
 			size={size}
 			fullWidth={fullWidth}
-			loading={loading}
+			isLoading={isLoading}
 		>
 			{leftIcon && !rightIcon && (
-				<IconStyles>
-					<Icon left={true} />
+				<IconStyles left={leftIcon}>
+					<Icon left={leftIcon} />
 				</IconStyles>
 			)}
-			{loading && <Icon loading={true} />}
-			{!loading && children}
+			{isLoading && <Icon isLoading={true} />}
+			{!isLoading && children}
 			{rightIcon && !leftIcon && (
-				<IconStyles>
-					<Icon right={true} />
+				<IconStyles right={rightIcon}>
+					<Icon right={rightIcon} />
 				</IconStyles>
 			)}
 		</ButtonStyles>
@@ -59,7 +58,7 @@ const Button: FC<ButtonProps> = (props) => {
 
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
-	// onClick: PropTypes.func.isRequired,
+	onClick: PropTypes.func.isRequired,
 	btnType: PropTypes.oneOf(["fill", "stroke", "text", "icon"]),
 	focusColor: PropTypes.string,
 	disabled: PropTypes.bool,
@@ -67,7 +66,7 @@ Button.propTypes = {
 	fullWidth: PropTypes.bool,
 	leftIcon: PropTypes.bool,
 	rightIcon: PropTypes.bool,
-	loading: PropTypes.bool,
+	isLoading: PropTypes.bool,
 };
 
 export default Button;

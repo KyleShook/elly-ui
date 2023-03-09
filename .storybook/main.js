@@ -4,7 +4,7 @@ module.exports = {
 	webpackFinal: async (config) => {
 		config.resolve.alias["@theme"] = path.resolve(
 			__dirname,
-			"../styles/theme.styled.js"
+			"../styles/theme.styled.tsx"
 		);
 
 		return config;

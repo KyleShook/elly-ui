@@ -1,4 +1,4 @@
-import { Button, RightArrowIcon } from "@components";
+import { Button, RightArrowIcon } from "@components/Atoms";
 import styled from "styled-components";
 
 export default function Home() {
@@ -13,22 +13,22 @@ export default function Home() {
 	return (
 		<StyledSection>
 			<Button>Click Me</Button>
-			<Button type="stroke">Click Me</Button>
-			<Button type="text">Click Me</Button>
-			<Button type="fill" disabled>
+			<Button btnType="stroke">Click Me</Button>
+			<Button btnType="text">Click Me</Button>
+			<Button btnType="fill" disabled>
 				Disabled
 			</Button>
-			<Button type="fill" loading size="small">
+			<Button btnType="fill" isLoading size="small">
 				Disabled
 			</Button>
 			<Button rightIcon>Next Step</Button>
 			<Button leftIcon>Previous Step</Button>
-			<Button type="icon" size="small">
+			<Button btnType="icon" size="small">
 				<RightArrowIcon />
 			</Button>
-			<Button size="small">Small</Button>
-			<Button size="medium">Medium</Button>
-			<Button size="large">Large</Button>
+			<Button size="small">Sm Button</Button>
+			<Button size="medium">Md Button</Button>
+			<Button size="large">Lg Button</Button>
 		</StyledSection>
 	);
 }

@@ -3,23 +3,23 @@ import { AnimatedLoadingIconContainer } from "./Icon.styled";
 interface IconProps {
 	left?: boolean;
 	right?: boolean;
-	loading?: boolean;
+	isLoading?: boolean;
 }
 
 const Icon: FC<IconProps> = ({
 	left = false,
 	right = false,
-	loading = false,
+	isLoading = false,
 }) => {
 	return (
 		<>
-			{loading && (
+			{isLoading && (
 				<AnimatedLoadingIconContainer>
 					<LoadingIcon />
 				</AnimatedLoadingIconContainer>
 			)}
-			{!loading && left && !right && <LeftArrowIcon />}
-			{!loading && right && !left && <RightArrowIcon />}
+			{!isLoading && left && !right && <LeftArrowIcon />}
+			{!isLoading && right && !left && <RightArrowIcon />}
 		</>
 	);
 };

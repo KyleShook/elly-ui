@@ -6,31 +6,30 @@ type ButtonProps = {
 	btnType: "fill" | "stroke" | "text" | "icon";
 	fullWidth?: boolean;
 	focusColor?: string;
-	loading?: boolean;
+	isLoading?: boolean;
 	disabled?: boolean;
 };
 
 type IconProps = {
 	left?: boolean;
 	right?: boolean;
-	loading?: boolean;
 };
 
 const buttonSizeStyles = {
 	small: css<ButtonProps>`
 		font-size: ${fontSize.small};
 		padding: 6px 12px;
-		min-width: ${(props) => (props.loading ? "92.5px" : "auto")};
+		min-width: ${(props) => (props.isLoading ? "92.5px" : "auto")};
 	`,
 	medium: css<ButtonProps>`
 		font-size: ${fontSize.medium};
 		padding: 8px 16px;
-		min-width: ${(props) => (props.loading ? "110px" : "auto")};
+		min-width: ${(props) => (props.isLoading ? "110px" : "auto")};
 	`,
 	large: css<ButtonProps>`
 		font-size: ${fontSize.medium};
 		padding: 10px 20px;
-		min-width: ${(props) => (props.loading ? "118px" : "auto")};
+		min-width: ${(props) => (props.isLoading ? "118px" : "auto")};
 	`,
 };
 const buttonTypeStyles = {
@@ -41,7 +40,7 @@ const buttonTypeStyles = {
 
 		&:hover {
 			background-color: ${(props) =>
-				props.loading ? colors.primary : colors.black};
+				props.isLoading ? colors.primary : colors.black};
 		}
 	`,
 	stroke: css<ButtonProps>`
@@ -73,7 +72,8 @@ const buttonTypeStyles = {
 };
 export const ButtonStyles = styled.button<ButtonProps>`
 	/* Default button styles */
-	background-color: ${colors.white};
+	background-color: red;
+	/* background-color: ${colors.white}; */
 	cursor: pointer;
 	font-weight: 600;
 	display: flex;
@@ -82,7 +82,7 @@ export const ButtonStyles = styled.button<ButtonProps>`
 	border: none;
 	transition: color 0.3s, background-color 0.3s;
 	width: ${(props) => (props.fullWidth ? "100%" : "auto")};
-	cursor: ${(props) => (props.loading ? "default" : "pointer")};
+	cursor: ${(props) => (props.isLoading ? "default" : "pointer")};
 
 	/* Button size styles */
 	${({ size }) => buttonSizeStyles[size]}
@@ -114,6 +114,16 @@ export const ButtonStyles = styled.button<ButtonProps>`
 export const IconStyles = styled.span<IconProps>`
 	display: flex;
 
-	/* margin: 0 0.3rem 0 0; */
+	${(props) =>
+		props.left &&
+		css`
+			margin-right: 0.3rem;
+		`}
+
+	${(props) =>
+		props.right &&
+		css`
+			margin-left: 0.3rem;
+		`}
 `;
 //# sourceMappingURL=Button.styled.js.map
