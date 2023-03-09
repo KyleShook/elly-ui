@@ -38,6 +38,7 @@ logs
 .vercel
 /drafts
 
-# storybook build
+# storybook 
 dist/storybook
 dist/docs
+/stories

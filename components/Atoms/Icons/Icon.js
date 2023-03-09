@@ -59,4 +59,4 @@ const LoadingIcon = () => {
 	);
 };
 
-export default Icon;
+export { Icon, LeftArrowIcon, RightArrowIcon, LoadingIcon };

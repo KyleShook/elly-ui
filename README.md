@@ -15,7 +15,8 @@ A collection of core components. Work in progress.
 ✅ Full width  
 ✅ Icon position  
 ✅ Loading state  
-🛠 Active state  
+🛠 A11y audit  
+🛠 Button shape (rounded, square, pill)
 🛠 Icon Collection  
 🛠 Custom styles
 
