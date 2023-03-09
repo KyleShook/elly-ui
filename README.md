@@ -6,8 +6,6 @@ A collection of core components. Work in progress.
 
 ### Button
 
-_TODO_ :
-
 ✅ Hover state  
 ✅ Disabled state  
 ✅ Focused state  
@@ -20,3 +18,23 @@ _TODO_ :
 🛠 Active state  
 🛠 Icon Collection  
 🛠 Custom styles
+
+### Button Group
+
+### Icon
+
+### Input
+
+### Avatar
+
+### Badge
+
+### Banner
+
+### Card
+
+### Checkbox
+
+### Radio
+
+### Switch/Toggle
