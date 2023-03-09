@@ -1,26 +1,40 @@
 import styled, { css } from "styled-components";
 import { colors, fontSize } from "@theme";
 
+type ButtonProps = {
+	size: "small" | "medium" | "large";
+	btnType: "fill" | "stroke" | "text" | "icon";
+	fullWidth?: boolean;
+	focusColor?: string;
+	loading?: boolean;
+	disabled?: boolean;
+};
+
+type IconProps = {
+	left?: boolean;
+	right?: boolean;
+	loading?: boolean;
+};
+
 const buttonSizeStyles = {
-	small: css`
+	small: css<ButtonProps>`
 		font-size: ${fontSize.small};
 		padding: 6px 12px;
 		min-width: ${(props) => (props.loading ? "92.5px" : "auto")};
 	`,
-	medium: css`
+	medium: css<ButtonProps>`
 		font-size: ${fontSize.medium};
 		padding: 8px 16px;
 		min-width: ${(props) => (props.loading ? "110px" : "auto")};
 	`,
-	large: css`
+	large: css<ButtonProps>`
 		font-size: ${fontSize.medium};
 		padding: 10px 20px;
 		min-width: ${(props) => (props.loading ? "118px" : "auto")};
 	`,
 };
-
 const buttonTypeStyles = {
-	fill: css`
+	fill: css<ButtonProps>`
 		background-color: ${colors.primary};
 		color: ${colors.white};
 		border: none;
@@ -30,7 +44,7 @@ const buttonTypeStyles = {
 				props.loading ? colors.primary : colors.black};
 		}
 	`,
-	stroke: css`
+	stroke: css<ButtonProps>`
 		background-color: ${colors.transparent};
 		color: ${colors.secondary};
 		border: 2px solid ${colors.secondary};
@@ -40,7 +54,7 @@ const buttonTypeStyles = {
 			color: ${colors.white};
 		}
 	`,
-	text: css`
+	text: css<ButtonProps>`
 		background-color: ${colors.transparent};
 		color: ${colors.tertiary};
 
@@ -48,7 +62,7 @@ const buttonTypeStyles = {
 			background: #f5f5f5;
 		}
 	`,
-	icon: css`
+	icon: css<ButtonProps>`
 		background-color: ${colors.primary};
 		color: ${colors.white};
 
@@ -57,8 +71,7 @@ const buttonTypeStyles = {
 		}
 	`,
 };
-
-export const ButtonStyles = styled.button`
+export const ButtonStyles = styled.button<ButtonProps>`
 	/* Default button styles */
 	background-color: ${colors.white};
 	cursor: pointer;
@@ -75,7 +88,7 @@ export const ButtonStyles = styled.button`
 	${({ size }) => buttonSizeStyles[size]}
 
 	/* Button type styles */
-  	${({ type }) => buttonTypeStyles[type]}
+  	${({ btnType }) => buttonTypeStyles[btnType]}
 
 
 	/* Button focus styles */
@@ -98,16 +111,9 @@ export const ButtonStyles = styled.button`
 			}
 		`}
 `;
-
-export const IconStyles = styled.span`
+export const IconStyles = styled.span<IconProps>`
 	display: flex;
 
-	${({ iconPos }) =>
-		iconPos === "left"
-			? css`
-					margin: 0 0.3rem 0 0;
-			  `
-			: css`
-					margin: 0 0 0 0.3rem;
-			  `}
+	/* margin: 0 0.3rem 0 0; */
 `;
+//# sourceMappingURL=Button.styled.js.map

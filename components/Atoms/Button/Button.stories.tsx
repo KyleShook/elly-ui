@@ -1,5 +1,16 @@
 import React from "react";
 import Button from "./Button";
+import { ComponentStory } from "@storybook/react";
+
+interface ButtonProps {
+	type: "fill" | "stroke" | "text" | "icon";
+	size: "small" | "medium" | "large";
+	fullWidth?: boolean;
+	disabled?: boolean;
+	loading?: boolean;
+	onClick?: () => void;
+	children: React.ReactNode;
+}
 
 export default {
 	title: "Atoms/Button",
@@ -25,38 +36,38 @@ export default {
 	},
 };
 
-const Template = (args) => <Button {...args}>{args.children}</Button>;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const FillButton = Template.bind({});
 FillButton.args = {
-	type: "fill",
+	btnType: "fill",
 	children: "Click Here",
 	size: "medium",
 };
 
 export const StrokeButton = Template.bind({});
 StrokeButton.args = {
-	type: "stroke",
+	btnType: "stroke",
 	children: "Click Here",
 	size: "medium",
 };
 
 export const TextButton = Template.bind({});
 TextButton.args = {
-	type: "text",
+	btnType: "text",
 	children: "Click Here",
 	size: "medium",
 };
 
 export const IconButton = Template.bind({});
 IconButton.args = {
-	type: "icon",
+	btnType: "icon",
 	children: "▶",
 	size: "medium",
 };
 export const DisabledButton = Template.bind({});
 DisabledButton.args = {
-	type: "fill",
+	btnType: "fill",
 	children: "Disabled",
 	disabled: true,
 	size: "medium",
@@ -64,7 +75,7 @@ DisabledButton.args = {
 
 export const LoadingButton = Template.bind({});
 LoadingButton.args = {
-	type: "fill",
+	btnType: "fill",
 	children: null,
 	size: "medium",
 	loading: true,

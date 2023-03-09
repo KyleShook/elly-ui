@@ -1,7 +1,16 @@
-import React from "react";
+import { FC } from "react";
 import { AnimatedLoadingIconContainer } from "./Icon.styled";
+interface IconProps {
+	left?: boolean;
+	right?: boolean;
+	loading?: boolean;
+}
 
-const Icon = ({ left, right, loading }) => {
+const Icon: FC<IconProps> = ({
+	left = false,
+	right = false,
+	loading = false,
+}) => {
 	return (
 		<>
 			{loading && (

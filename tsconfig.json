@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Specifies the libraries that are available to the code.
+    "allowJs": true, // Allows JavaScript files to be included in the project.
+    "jsx": "preserve", // Specifies how to handle JSX syntax.
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "@types/aria-query"
+    ],
+    "paths": {
+      "@components/*": [
+        "./components/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@theme/*": [
+        "./styles/theme.styled.js"
+      ]
+    },
+    "sourceMap": true, // Specifies whether to generate source maps.
+    "strict": true, // Enables strict mode.
+    "esModuleInterop": true, // Enables interoperability between CommonJS and ES Modules.
+    "skipLibCheck": true, // Skips type checking for declaration files.
+    "forceConsistentCasingInFileNames": true, // Enforces consistent file casing.
+    "noFallthroughCasesInSwitch": true // Disallows falling through case statements in switch statements.
+    ,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ], // Specifies which files to include in the compilation.
+  "exclude": [
+    "node_modules",
+    "/.next"
+  ] // Specifies which files to exclude from the compilation.
+}
