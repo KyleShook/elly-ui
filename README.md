@@ -1,8 +1,10 @@
 # Elly UI Library
 
 A collection of core components. Work in progress.
-React / Typescript
-Styled Components / Storybook / Chromatic
+
+React / Typescript  
+Styled Components  
+Storybook / Chromatic  
 Jest / React Testing Library
 
 ## Components
@@ -18,9 +20,10 @@ Jest / React Testing Library
 ✅ Full width  
 ✅ Icon position  
 ✅ Loading state  
+✅ Status state  
+✅ Button shape (rounded, square, pill)  
+❎ Custom styles (Partially implemented)
 🛠 A11y audit  
-🛠 Button shape (rounded, square, pill)  
-🛠 Custom styles  
 🛠 Test coverage
 
 ### Button Group

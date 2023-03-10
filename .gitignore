@@ -47,3 +47,8 @@ dist/docs
 
 .npmrc
 
+tsconfig.tsbuildinfo
+
+build-storybook.log
+
+/sb-starter/

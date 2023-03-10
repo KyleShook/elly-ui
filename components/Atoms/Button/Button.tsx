@@ -14,6 +14,13 @@ interface ButtonProps {
 	leftIcon?: boolean;
 	rightIcon?: boolean;
 	isLoading?: boolean;
+	shape?: "square" | "rounded" | "pill" | undefined;
+	bgColor?: string;
+	strokeColor?: string;
+	textColor?: string;
+	noUnderline?: boolean;
+	underlineColor?: string;
+	status?: "success" | "error" | "warning" | "info" | undefined;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -28,6 +35,13 @@ const Button: FC<ButtonProps> = (props) => {
 		leftIcon = false,
 		rightIcon = false,
 		isLoading = false,
+		shape = "square",
+		bgColor = "",
+		strokeColor = "",
+		textColor = "",
+		noUnderline = false,
+		underlineColor = textColor,
+		status,
 	} = props;
 
 	return (
@@ -39,6 +53,13 @@ const Button: FC<ButtonProps> = (props) => {
 			size={size}
 			fullWidth={fullWidth}
 			isLoading={isLoading}
+			shape={shape}
+			bgColor={bgColor}
+			strokeColor={strokeColor}
+			textColor={textColor}
+			noUnderline={noUnderline}
+			underlineColor={underlineColor}
+			status={status}
 		>
 			{leftIcon && !rightIcon && (
 				<IconStyles left={leftIcon}>
@@ -67,6 +88,13 @@ Button.propTypes = {
 	leftIcon: PropTypes.bool,
 	rightIcon: PropTypes.bool,
 	isLoading: PropTypes.bool,
+	shape: PropTypes.oneOf(["square", "rounded", "pill", undefined]),
+	bgColor: PropTypes.string,
+	strokeColor: PropTypes.string,
+	textColor: PropTypes.string,
+	noUnderline: PropTypes.bool,
+	underlineColor: PropTypes.string,
+	status: PropTypes.oneOf(["success", "error", "warning", "info", undefined]),
 };
 
 export default Button;

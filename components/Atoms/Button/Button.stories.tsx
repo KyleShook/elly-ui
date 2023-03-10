@@ -7,7 +7,14 @@ export default {
 	component: Button,
 	args: {
 		btnType: "fill",
+		shape: "square",
 		size: "medium",
+		status: undefined,
+		bgColor: "",
+		strokeColor: "",
+		textColor: "",
+		underlineColor: "",
+		noUnderline: false,
 		leftIcon: false,
 		rightIcon: false,
 		disabled: false,
@@ -61,14 +68,51 @@ export default {
 				options: ["fill", "stroke", "text"],
 			},
 		},
+		shape: {
+			control: {
+				type: "select",
+				options: ["square", "rounded", "pill"],
+			},
+		},
 		size: {
 			control: {
 				type: "select",
 				options: ["small", "medium", "large"],
 			},
 		},
+		status: {
+			control: {
+				type: "select",
+				options: ["success", "error", "warning", "info", undefined],
+			},
+		},
 		onClick: {
 			action: "clicked",
+		},
+		bgColor: {
+			control: {
+				type: "color",
+			},
+		},
+		strokeColor: {
+			control: {
+				type: "color",
+			},
+		},
+		textColor: {
+			control: {
+				type: "color",
+			},
+		},
+		underlineColor: {
+			control: {
+				type: "color",
+			},
+		},
+		noUnderline: {
+			control: {
+				type: "boolean",
+			},
 		},
 	},
 } as ComponentMeta<typeof Button>;
@@ -106,4 +150,10 @@ export const LoadingButton = Template.bind({});
 LoadingButton.args = {
 	children: undefined,
 	isLoading: true,
+};
+
+export const StatusButton = Template.bind({});
+StatusButton.args = {
+	children: "Success",
+	status: "success",
 };

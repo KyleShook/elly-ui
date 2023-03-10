@@ -1,17 +1,17 @@
-import { Meta } from '@storybook/addon-docs';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import { Meta } from "@storybook/addon-docs";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
 
 <Meta title="Example/Introduction" />
 
 <style>
-  {`
+	{`
     .subheading {
       --mediumdark: '#999999';
       font-weight: 900;
@@ -56,6 +56,9 @@ import StackAlt from './assets/stackalt.svg';
       color: #333333;
       display: flex;
       align-items: flex-start;
+      max-width: 200px;
+      margin-bottom: 10px;
+      background: #d1e8f0;
     }
 
     .link-item:hover {
@@ -114,9 +117,35 @@ import StackAlt from './assets/stackalt.svg';
   `}
 </style>
 
-# Welcome to Storybook
+# Welcome to Elly UI
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
+_Elly UI is a React UI library that provides a set of basic components._
+
+<a
+	className="link-item"
+	href="https://github.com/KyleShook/elly-ui"
+	target="_blank"
+>
+	<span>
+		<strong>GitHub Repository</strong>
+	</span>
+</a>
+<a
+	className="link-item"
+	href="https://main--64054505bba1e1663987a383.chromatic.com"
+	target="_blank"
+>
+	<span>
+		<strong>Latest Live Storybook</strong>
+	</span>
+</a>
+<a className="link-item" href="https://elly-ui.vercel.app/" target="_blank">
+	<span>
+		<strong>Demo Page</strong>
+	</span>
+</a>
+
+<!-- Storybook helps you build UI components in isolation from your app's business logic, data, and context.
 That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
 
 Browse example stories now by navigating to them in the sidebar.
@@ -208,4 +237,4 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
 <div className="tip-wrapper">
   <span className="tip">Tip</span>Edit the Markdown in{' '}
   <code>stories/Introduction.stories.mdx</code>
-</div>
+</div> -->

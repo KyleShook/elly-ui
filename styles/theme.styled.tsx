@@ -24,6 +24,10 @@ export const colors = {
 	gray: "#ccc",
 	darkGray: "#3a3a3a",
 	transparent: "transparent",
+	warning: "#ff9800",
+	info: "#216297",
+	success: "#4caf50",
+	error: "#f44336",
 };
 export const fontSize = {
 	small: "14px",
