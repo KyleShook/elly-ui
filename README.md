@@ -22,7 +22,7 @@ Jest / React Testing Library
 ✅ Loading state  
 ✅ Status state  
 ✅ Button shape (rounded, square, pill)  
-❎ Custom styles (Partially implemented)
+❎ Custom styles _(Partially implemented)_  
 🛠 A11y audit  
 🛠 Test coverage
 
