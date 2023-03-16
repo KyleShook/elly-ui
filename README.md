@@ -29,7 +29,7 @@ Jest / React Testing Library
 
 ### Button Group 🟡
 
-❎ Custom styles _(Partially implemented)_
+❎ Custom styles _(Partially implemented)_  
 🛠 A11y audit  
 🛠 Test coverage
 
