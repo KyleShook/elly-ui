@@ -9,7 +9,7 @@ Jest / React Testing Library
 
 ## Components
 
-### Button
+### Button 🟡
 
 ✅ Hover state  
 ✅ Disabled state  
@@ -21,29 +21,64 @@ Jest / React Testing Library
 ✅ Icon position  
 ✅ Loading state  
 ✅ Status state  
+✅ Active state
 ✅ Button shape (rounded, square, pill)  
 ❎ Custom styles _(Partially implemented)_  
 🛠 A11y audit  
 🛠 Test coverage
 
-### Button Group
+### Button Group 🟡
 
-### Icon
+❎ Custom styles _(Partially implemented)_
+🛠 A11y audit  
+🛠 Test coverage
 
-### Icon Collection
+### Icon 🔴
 
-### Input
+🛠 A11y audit  
+🛠 Test coverage
 
-### Avatar
+### Icon Collection 🔴
 
-### Badge
+🛠 A11y audit  
+🛠 Test coverage
 
-### Banner
+### Input 🔴
 
-### Card
+🛠 A11y audit  
+🛠 Test coverage
 
-### Checkbox
+### Avatar 🔴
 
-### Radio
+🛠 A11y audit  
+🛠 Test coverage
 
-### Switch/Toggle
+### Badge 🔴
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### Banner 🔴
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### Card 🔴
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### Checkbox 🔴
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### Radio 🔴
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### Switch/Toggle 🔴
+
+🛠 A11y audit  
+🛠 Test coverage

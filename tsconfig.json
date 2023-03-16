@@ -12,7 +12,10 @@
 			"@types/aria-query",
 			"jest",
 			"@testing-library/jest-dom",
-			"@testing-library/react"
+			"@testing-library/react",
+			"react",
+			"react-dom",
+			"styled-components"
 		],
 		"paths": {
 			"@components/*": ["./components/*"],

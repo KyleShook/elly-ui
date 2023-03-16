@@ -1,14 +1,16 @@
 import { Button, RightArrowIcon } from "@components/Atoms";
 import styled from "styled-components";
+import { ButtonGroup } from "@components/Molecules";
 
 export default function Home() {
 	const StyledSection = styled.section`
-		margin: 96px 0 0;
+		margin: 48px 24px 0;
 	`;
 
 	const ButtonContainer = styled.div`
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		max-width: 480px;
 		width: 100%;
 		padding: 16px;
@@ -20,55 +22,96 @@ export default function Home() {
 	`;
 
 	return (
-		<StyledSection>
-			<h1>Button</h1>
-			<ButtonContainer>
-				<Button>Click Me</Button>
-				<Button btnType="stroke">Click Me</Button>
-				<Button btnType="text">Click Me</Button>
-				<Button btnType="fill" disabled>
-					Disabled
-				</Button>
-				<Button btnType="fill" isLoading size="small">
-					Disabled
-				</Button>
-				<Button rightIcon>Next Step</Button>
-				<Button leftIcon>Previous Step</Button>
-				<Button btnType="icon" size="small">
-					<RightArrowIcon />
-				</Button>
-				<Button size="small">Sm Button</Button>
-				<Button size="medium">Md Button</Button>
-				<Button size="large">Lg Button</Button>
-				<Button shape="pill">Pill Button</Button>
-				<Button shape="rounded">Rounded Button</Button>
-				<Button shape="square">Square Button</Button>
-				<Button btnType="fill" status="success">
-					Success
-				</Button>
-				<Button btnType="fill" status="warning">
-					Warning
-				</Button>
-				<Button btnType="fill" status="error">
-					Error
-				</Button>
-				<Button btnType="fill" status="info">
-					Info
-				</Button>
-				<Button bgColor="green">Background Color</Button>
-				<Button btnType="stroke" strokeColor="black">
-					Stroke Color
-				</Button>
-				<Button btnType="text" textColor="blue">
-					Text Color
-				</Button>
-				<Button btnType="text" textColor="blue" underlineColor="red">
-					Underline Color
-				</Button>
-				<Button btnType="text" textColor="blue" noUnderline>
-					No underline
-				</Button>
-			</ButtonContainer>
-		</StyledSection>
+		<>
+			<StyledSection>
+				<h2>Button</h2>
+				<ButtonContainer>
+					<Button onClick={() => {}}>Click Me</Button>
+					<Button onClick={() => {}} btnType="stroke">
+						Click Me
+					</Button>
+					<Button onClick={() => {}} btnType="text">
+						Click Me
+					</Button>
+					<Button onClick={() => {}} btnType="fill" disabled>
+						Disabled
+					</Button>
+					<Button onClick={() => {}} btnType="fill" isLoading size="small">
+						Disabled
+					</Button>
+					<Button onClick={() => {}} rightIcon>
+						Next Step
+					</Button>
+					<Button onClick={() => {}} leftIcon>
+						Previous Step
+					</Button>
+					<Button onClick={() => {}} btnType="icon" size="small">
+						<RightArrowIcon />
+					</Button>
+					<Button onClick={() => {}} size="small">
+						Sm Button
+					</Button>
+					<Button onClick={() => {}} size="medium">
+						Md Button
+					</Button>
+					<Button onClick={() => {}} size="large">
+						Lg Button
+					</Button>
+					<Button onClick={() => {}} shape="pill">
+						Pill Button
+					</Button>
+					<Button onClick={() => {}} shape="rounded">
+						Rounded Button
+					</Button>
+					<Button onClick={() => {}} shape="square">
+						Square Button
+					</Button>
+					<Button onClick={() => {}} btnType="fill" status="success">
+						Success
+					</Button>
+					<Button onClick={() => {}} btnType="fill" status="warning">
+						Warning
+					</Button>
+					<Button onClick={() => {}} btnType="fill" status="error">
+						Error
+					</Button>
+					<Button onClick={() => {}} btnType="fill" status="info">
+						Info
+					</Button>
+					<Button onClick={() => {}} bgColor="green">
+						Background Color
+					</Button>
+					<Button onClick={() => {}} btnType="stroke" strokeColor="black">
+						Stroke Color
+					</Button>
+					<Button onClick={() => {}} btnType="text" textColor="blue">
+						Text Color
+					</Button>
+					<Button
+						onClick={() => {}}
+						btnType="text"
+						textColor="blue"
+						underlineColor="red"
+					>
+						Underline Color
+					</Button>
+					<Button
+						onClick={() => {}}
+						btnType="text"
+						textColor="blue"
+						noUnderline
+					>
+						No underline
+					</Button>
+				</ButtonContainer>
+			</StyledSection>
+			<StyledSection>
+				<h2>Button Group</h2>
+				<ButtonGroup sx={{ border: "1px solid gray" }} pd={"1rem"}>
+					<Button onClick={() => {}}>Click Me</Button>
+					<Button onClick={() => {}}>Click Me</Button>
+				</ButtonGroup>
+			</StyledSection>
+		</>
 	);
 }

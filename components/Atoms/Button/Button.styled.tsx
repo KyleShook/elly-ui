@@ -26,18 +26,34 @@ const buttonStatusStyles = {
 	success: css<ButtonProps>`
 		background-color: ${colors.success};
 		color: ${colors.white};
+
+		&:hover {
+			background-color: ${colors.successLight};
+		}
 	`,
 	error: css<ButtonProps>`
 		background-color: ${colors.error};
 		color: ${colors.white};
+
+		&:hover {
+			background-color: ${colors.errorLight};
+		}
 	`,
 	warning: css<ButtonProps>`
 		background-color: ${colors.warning};
 		color: ${colors.white};
+
+		&:hover {
+			background-color: ${colors.warningLight};
+		}
 	`,
 	info: css<ButtonProps>`
 		background-color: ${colors.info};
 		color: ${colors.white};
+
+		&:hover {
+			background-color: ${colors.infoLight};
+		}
 	`,
 };
 
@@ -157,6 +173,11 @@ export const ButtonStyles = styled.button<ButtonProps>`
 		outline: 2px solid
 			${(props) => (props.focusColor ? props.focusColor : colors.primary)};
 		outline-offset: 2.5px;
+	}
+
+	&:active {
+		transform: translateY(1px);
+		background-color: ${colors.active};
 	}
 
 	/* Disabled button styles */
