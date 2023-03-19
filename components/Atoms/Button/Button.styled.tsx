@@ -12,9 +12,10 @@ type ButtonProps = {
 	bgColor?: string;
 	strokeColor?: string;
 	textColor?: string;
-	noUnderline?: boolean;
+	underline?: boolean;
 	underlineColor?: string;
 	status?: "success" | "error" | "warning" | "info";
+	minWidth?: string;
 };
 
 type IconProps = {
@@ -107,7 +108,7 @@ const buttonTypeStyles = {
 		background-color: ${(props) =>
 			props.bgColor ? props.bgColor : colors.transparent};
 		color: ${(props) => (props.textColor ? props.textColor : colors.tertiary)};
-		text-decoration: ${(props) => (props.noUnderline ? "none" : "underline")};
+		text-decoration: ${(props) => (props.underline ? "underline" : "none")};
 		text-underline-offset: 2px;
 		text-decoration-color: ${(props) =>
 			props.underlineColor ? props.underlineColor : colors.tertiary};
@@ -153,6 +154,7 @@ export const ButtonStyles = styled.button<ButtonProps>`
 	border: none;
 	transition: color 0.3s, background-color 0.3s;
 	width: ${(props) => (props.fullWidth ? "100%" : "auto")};
+	min-width: ${(props) => (props.minWidth ? props.minWidth : "90px")};
 	cursor: ${(props) => (props.isLoading ? "default" : "pointer")};
 
 	/* Button size styles */

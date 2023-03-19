@@ -87,27 +87,27 @@ export default function Home() {
 					<Button onClick={() => {}} btnType="text" textColor="blue">
 						Text Color
 					</Button>
+					<Button onClick={() => {}} btnType="text" textColor="blue" underline>
+						Underline
+					</Button>
 					<Button
 						onClick={() => {}}
 						btnType="text"
 						textColor="blue"
 						underlineColor="red"
+						underline
 					>
 						Underline Color
-					</Button>
-					<Button
-						onClick={() => {}}
-						btnType="text"
-						textColor="blue"
-						noUnderline
-					>
-						No underline
 					</Button>
 				</ButtonContainer>
 			</StyledSection>
 			<StyledSection>
 				<h2>Button Group</h2>
-				<ButtonGroup sx={{ border: "1px solid gray" }} pd={"1rem"}>
+				<ButtonGroup
+					btnTypes={["fill", "text"]}
+					sx={{ border: "1px solid gray" }}
+					pd={"1rem"}
+				>
 					<Button onClick={() => {}}>Click Me</Button>
 					<Button onClick={() => {}}>Click Me</Button>
 				</ButtonGroup>

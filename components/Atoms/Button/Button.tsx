@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ButtonStyles, IconStyles } from "./Button.styled";
 import { Icon } from "../Icons/Icon";
 
-interface ButtonProps {
+export interface ButtonProps {
 	children: React.ReactNode;
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
 	btnType?: "fill" | "stroke" | "text" | "icon";
@@ -14,13 +14,14 @@ interface ButtonProps {
 	leftIcon?: boolean;
 	rightIcon?: boolean;
 	isLoading?: boolean;
-	shape?: "square" | "rounded" | "pill" | undefined;
+	shape?: "square" | "rounded" | "pill";
 	bgColor?: string;
 	strokeColor?: string;
 	textColor?: string;
-	noUnderline?: boolean;
+	underline?: boolean;
 	underlineColor?: string;
 	status?: "success" | "error" | "warning" | "info" | undefined;
+	minWidth?: string;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -39,9 +40,10 @@ const Button: FC<ButtonProps> = (props) => {
 		bgColor = "",
 		strokeColor = "",
 		textColor = "",
-		noUnderline = false,
+		underline = false,
 		underlineColor = textColor,
 		status,
+		minWidth,
 	} = props;
 
 	return (
@@ -57,9 +59,10 @@ const Button: FC<ButtonProps> = (props) => {
 			bgColor={bgColor}
 			strokeColor={strokeColor}
 			textColor={textColor}
-			noUnderline={noUnderline}
+			underline={underline}
 			underlineColor={underlineColor}
 			status={status}
+			minWidth={minWidth}
 		>
 			{leftIcon && !rightIcon && (
 				<IconStyles left={leftIcon}>
@@ -88,13 +91,14 @@ Button.propTypes = {
 	leftIcon: PropTypes.bool,
 	rightIcon: PropTypes.bool,
 	isLoading: PropTypes.bool,
-	shape: PropTypes.oneOf(["square", "rounded", "pill", undefined]),
+	shape: PropTypes.oneOf(["square", "rounded", "pill"]),
 	bgColor: PropTypes.string,
 	strokeColor: PropTypes.string,
 	textColor: PropTypes.string,
-	noUnderline: PropTypes.bool,
+	underline: PropTypes.bool,
 	underlineColor: PropTypes.string,
-	status: PropTypes.oneOf(["success", "error", "warning", "info", undefined]),
+	status: PropTypes.oneOf(["success", "error", "warning", "info"]),
+	minWidth: PropTypes.string,
 };
 
 export default Button;

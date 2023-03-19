@@ -6,11 +6,13 @@ type ButtonGroupProps = {
 	sx?: object | undefined;
 	width?: string | undefined;
 	gap?: string | undefined;
+	noWrap?: boolean;
 };
 
 export const GroupContainer = styled.div<ButtonGroupProps>`
 	display: flex;
 	flex-direction: row;
+	flex-wrap: ${(props) => (props.noWrap ? "nowrap" : "wrap")};
 	justify-content: flex-start;
 	gap: ${(props) => (props.gap ? props.gap : "1rem")};
 	width: ${(props) => (props.width ? props.width : "fit-content")};
