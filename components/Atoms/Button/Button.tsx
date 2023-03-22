@@ -4,7 +4,7 @@ import { ButtonStyles, IconStyles } from "./Button.styled";
 import { Icon } from "../Icons/Icon";
 
 export interface ButtonProps {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
 	btnType?: "fill" | "stroke" | "text" | "icon";
 	focusColor?: string;
@@ -81,7 +81,7 @@ const Button: FC<ButtonProps> = (props) => {
 };
 
 Button.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	onClick: PropTypes.func.isRequired,
 	btnType: PropTypes.oneOf(["fill", "stroke", "text", "icon"]),
 	focusColor: PropTypes.string,

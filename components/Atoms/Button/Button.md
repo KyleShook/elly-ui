@@ -10,7 +10,7 @@ The following props can be passed to the `Button` component to customize its app
 
 | Prop Name      | Type                                         | Default Value       | Description                                                                    |
 |----------------|----------------------------------------------|---------------------|--------------------------------------------------------------------------------|
-| children       | `React.ReactNode`                            | Required            | The content to display within the button element.                              |
+| children       | `React.ReactNode`                            |                     | The content to display within the button element.                              |
 | onClick        | `React.MouseEventHandler<HTMLButtonElement>` | Required            | The callback function that will be called when the button is clicked.          |
 | btnType        | `fill` `stroke` `text` `icon`                | `fill`              | The type of button.                                                            |
 | focusColor     | `string`                                     |                     | The color of the button when it is focused.                                    |
