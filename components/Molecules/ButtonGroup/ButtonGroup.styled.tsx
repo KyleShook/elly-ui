@@ -3,7 +3,7 @@ import { colors, fontSize } from "@theme";
 
 type ButtonGroupProps = {
 	pd?: string | undefined;
-	sx?: object | undefined;
+	st?: object | undefined;
 	width?: string | undefined;
 	gap?: string | undefined;
 	noWrap?: boolean;
@@ -19,5 +19,5 @@ export const GroupContainer = styled.div<ButtonGroupProps>`
 
 	padding: ${(props) => (props.pd ? props.pd : "0")};
 
-	${(props) => props.sx && (props.sx as any)};
+	${(props) => props.st && (props.st as any)};
 `;

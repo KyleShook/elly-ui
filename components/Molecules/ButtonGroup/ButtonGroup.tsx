@@ -10,14 +10,14 @@ interface ButtonGroupProps {
 	size?: "small" | "medium" | "large";
 	shape?: "square" | "rounded" | "pill";
 	btnTypes?: ("fill" | "stroke" | "text" | "icon")[];
-	sx?: object | undefined;
+	st?: object | undefined;
 	width?: string | undefined;
 	noWrap?: boolean;
 }
 
 const ButtonGroup: FC<ButtonGroupProps> = ({
 	children,
-	sx,
+	st,
 	pd,
 	width,
 	gap,
@@ -41,7 +41,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 		<GroupContainer
 			role="group"
 			pd={pd}
-			sx={sx}
+			st={st}
 			width={width}
 			gap={gap}
 			noWrap={noWrap}
@@ -55,7 +55,7 @@ ButtonGroup.propTypes = {
 	size: PropTypes.oneOf(["small", "medium", "large"]),
 	shape: PropTypes.oneOf(["square", "rounded", "pill"]),
 	children: PropTypes.arrayOf(PropTypes.element.isRequired).isRequired,
-	sx: PropTypes.object,
+	st: PropTypes.object,
 	pd: PropTypes.string,
 	width: PropTypes.string,
 	gap: PropTypes.string,

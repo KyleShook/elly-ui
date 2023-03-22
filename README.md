@@ -9,7 +9,7 @@ Jest / React Testing Library
 
 ## Components
 
-### Button 🟡
+### 🟡 Button 
 
 [Documentation](https://github.com/KyleShook/elly-ui/blob/main/components/Atoms/Button/Button.md)
 
@@ -29,60 +29,60 @@ Jest / React Testing Library
 🛠 A11y audit  
 🛠 Test coverage
 
-### Button Group 🟡
+### 🟡 Button Group 
 
 ✅ Assign button shape and size  
 ✅ Assign button types (needed?)  
-✅ Custom styles prop | `sx`  
+✅ Custom styles prop | `st`  
 🛠 A11y audit  
 🛠 Test coverage  
 
-### Icon 🟡
+### 🟡 Icon 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Icon Collection 🟡
+### 🟡 Icon Collection 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Input 🔴
+### 🔴 Input 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Avatar 🔴
+### 🔴 Avatar 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Badge 🔴
+### 🔴 Badge 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Banner 🔴
+### 🔴 Banner 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Card 🔴
+### 🔴 Card 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Checkbox 🔴
+### 🔴 Checkbox 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Radio 🔴
+### 🔴 Radio 
 
 🛠 A11y audit  
 🛠 Test coverage
 
-### Switch/Toggle 🔴
+### 🔴 Switch/Toggle 
 
 🛠 A11y audit  
 🛠 Test coverage

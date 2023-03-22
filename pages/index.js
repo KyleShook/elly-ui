@@ -105,7 +105,7 @@ export default function Home() {
 				<h2>Button Group</h2>
 				<ButtonGroup
 					btnTypes={["fill", "text"]}
-					sx={{ border: "1px solid gray" }}
+					st={{ border: "1px solid gray" }}
 					pd={"1rem"}
 				>
 					<Button onClick={() => {}}>Click Me</Button>
