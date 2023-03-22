@@ -11,6 +11,8 @@ Jest / React Testing Library
 
 ### Button 🟡
 
+[Documentation](https://github.com/KyleShook/elly-ui/blob/main/components/Atoms/Button/Button.md)
+
 ✅ Hover state  
 ✅ Disabled state  
 ✅ Focused state  
@@ -29,18 +31,18 @@ Jest / React Testing Library
 
 ### Button Group 🟡
 
-✅ Assign button shape and size
-✅ Assign button types
-❎ Custom styles _(Partially implemented)_
+✅ Assign button shape and size  
+✅ Assign button types (needed?)  
+✅ Custom styles prop | `sx`  
+🛠 A11y audit  
+🛠 Test coverage  
+
+### Icon 🟡
+
 🛠 A11y audit  
 🛠 Test coverage
 
-### Icon 🔴
-
-🛠 A11y audit  
-🛠 Test coverage
-
-### Icon Collection 🔴
+### Icon Collection 🟡
 
 🛠 A11y audit  
 🛠 Test coverage
