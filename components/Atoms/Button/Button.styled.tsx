@@ -16,6 +16,7 @@ type ButtonProps = {
 	underlineColor?: string;
 	status?: "success" | "error" | "warning" | "info";
 	minWidth?: string;
+	st?: object | undefined;
 };
 
 type IconProps = {
@@ -194,6 +195,9 @@ export const ButtonStyles = styled.button<ButtonProps>`
 				background-color: ${colors.gray};
 			}
 		`}
+
+	/* Custom styles via props */
+		${(props) => props.st && (props.st as any)}
 `;
 export const IconStyles = styled.span<IconProps>`
 	display: flex;

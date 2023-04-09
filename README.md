@@ -21,11 +21,11 @@ Jest / React Testing Library
 ✅ Size (small, medium, large)  
 ✅ Full width  
 ✅ Icon position  
-✅ Loading state  
 ✅ Status state  
+✅ Loading state  
 ✅ Active state  
 ✅ Button shape (rounded, square, pill)  
-❎ Custom styles _(Partially implemented)_  
+✅ Custom styles prop | `st`  
 🛠 A11y audit  
 🛠 Test coverage
 
@@ -39,18 +39,14 @@ Jest / React Testing Library
 
 ### 🟡 Icon 
 
+✅ Size (sm, md, lg, xl, xxl, xxxl)  
+✅ Custom color  
+✅ Icon `name` prop  
+✅ Alt attribute    
+✅ onClick event  
+✅ Custom styles prop | `st`  
 🛠 A11y audit  
-🛠 Test coverage
-
-### 🟡 Icon Collection 
-
-🛠 A11y audit  
-🛠 Test coverage
-
-### 🔴 Input 
-
-🛠 A11y audit  
-🛠 Test coverage
+🛠 Test coverage  
 
 ### 🔴 Avatar 
 
@@ -78,6 +74,11 @@ Jest / React Testing Library
 🛠 Test coverage
 
 ### 🔴 Radio 
+
+🛠 A11y audit  
+🛠 Test coverage
+
+### 🔴 Input 
 
 🛠 A11y audit  
 🛠 Test coverage

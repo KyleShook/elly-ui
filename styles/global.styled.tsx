@@ -63,10 +63,10 @@ a {
 }
 
 /* Make images easier to work with */
-img {
+/* img {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {
@@ -100,10 +100,10 @@ footer {
   margin: auto;
 }
 
-img {
+/* img {
 	height: auto;
 	width: 100%;
-}
+} */
 
 p {
 	font-size: ${type.medium};

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import Icon from "../Icon/Icon";
 
 export default {
 	title: "Atoms/Button",
@@ -134,10 +135,20 @@ TextButton.args = {
 	btnType: "text",
 };
 
+// export const IconButton = Template.bind({});
+// IconButton.args = {
+// 	btnType: "icon",
+// 	icon: <Icon name={"BxCheck"} color="white" size="lg" alt="Checkmark icon" />,
+// 	rightIcon: true,
+// 	children: null,
+// };
+
 export const IconButton = Template.bind({});
 IconButton.args = {
-	btnType: "icon",
-	children: "▶",
+	btnType: "fill",
+	rightIcon: (
+		<Icon name={"BxBell"} color="white" size="lg" alt="notifcation icon" />
+	),
 };
 
 export const DisabledButton = Template.bind({});
