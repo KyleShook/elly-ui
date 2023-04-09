@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import PropTypes from "prop-types";
 import { ButtonStyles, IconStyles } from "./Button.styled";
-import { Icon } from "../Icons/Icon";
+import { Icons } from "../Icons/Icons";
 
 export interface ButtonProps {
 	children?: React.ReactNode;
@@ -11,8 +11,9 @@ export interface ButtonProps {
 	disabled?: boolean;
 	size?: "small" | "medium" | "large";
 	fullWidth?: boolean;
-	leftIcon?: boolean;
-	rightIcon?: boolean;
+	leftIcon?: boolean | React.ReactNode;
+	rightIcon?: boolean | React.ReactNode;
+	icon?: boolean | React.ReactNode;
 	isLoading?: boolean;
 	shape?: "square" | "rounded" | "pill";
 	bgColor?: string;
@@ -22,6 +23,7 @@ export interface ButtonProps {
 	underlineColor?: string;
 	status?: "success" | "error" | "warning" | "info" | undefined;
 	minWidth?: string;
+	st?: object | undefined;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -35,6 +37,7 @@ const Button: FC<ButtonProps> = (props) => {
 		fullWidth = false,
 		leftIcon = false,
 		rightIcon = false,
+		icon = false,
 		isLoading = false,
 		shape = "square",
 		bgColor = "",
@@ -44,6 +47,7 @@ const Button: FC<ButtonProps> = (props) => {
 		underlineColor = textColor,
 		status,
 		minWidth,
+		st,
 	} = props;
 
 	return (
@@ -63,18 +67,14 @@ const Button: FC<ButtonProps> = (props) => {
 			underlineColor={underlineColor}
 			status={status}
 			minWidth={minWidth}
+			st={st}
 		>
 			{leftIcon && !rightIcon && (
-				<IconStyles left={leftIcon}>
-					<Icon left={leftIcon} />
-				</IconStyles>
+				<IconStyles left={true}>{leftIcon}</IconStyles>
 			)}
-			{isLoading && <Icon isLoading={true} />}
-			{!isLoading && children}
+			{icon && !children ? icon : children}
 			{rightIcon && !leftIcon && (
-				<IconStyles right={rightIcon}>
-					<Icon right={rightIcon} />
-				</IconStyles>
+				<IconStyles right={true}>{rightIcon}</IconStyles>
 			)}
 		</ButtonStyles>
 	);
@@ -88,8 +88,9 @@ Button.propTypes = {
 	disabled: PropTypes.bool,
 	size: PropTypes.oneOf(["small", "medium", "large"]),
 	fullWidth: PropTypes.bool,
-	leftIcon: PropTypes.bool,
-	rightIcon: PropTypes.bool,
+	leftIcon: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+	rightIcon: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+	icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 	isLoading: PropTypes.bool,
 	shape: PropTypes.oneOf(["square", "rounded", "pill"]),
 	bgColor: PropTypes.string,
@@ -99,6 +100,7 @@ Button.propTypes = {
 	underlineColor: PropTypes.string,
 	status: PropTypes.oneOf(["success", "error", "warning", "info"]),
 	minWidth: PropTypes.string,
+	st: PropTypes.object,
 };
 
 export default Button;

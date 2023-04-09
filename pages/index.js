@@ -1,4 +1,4 @@
-import { Button, RightArrowIcon } from "@components/Atoms";
+import { Button, RightArrowIcon, Icon } from "@components/Atoms";
 import styled from "styled-components";
 import { ButtonGroup } from "@components/Molecules";
 
@@ -36,14 +36,25 @@ export default function Home() {
 					<Button onClick={() => {}} btnType="fill" disabled>
 						Disabled
 					</Button>
-					<Button onClick={() => {}} btnType="fill" isLoading size="small">
-						Disabled
+					<Button
+						onClick={() => {}}
+						btnType="fill"
+						size="small"
+						icon={
+							<Icon name={"BxLoaderAlt"} color="white" size="md" isLoading />
+						}
+					/>
+					<Button
+						onClick={() => {}}
+						rightIcon={<Icon name={"BxBell"} color="white" size="lg" />}
+					>
+						Click Me
 					</Button>
-					<Button onClick={() => {}} rightIcon>
-						Next Step
-					</Button>
-					<Button onClick={() => {}} leftIcon>
-						Previous Step
+					<Button
+						onClick={() => {}}
+						leftIcon={<Icon name={"BxBell"} color="white" size="lg" />}
+					>
+						Ding Ding
 					</Button>
 					<Button onClick={() => {}} btnType="icon" size="small">
 						<RightArrowIcon />
@@ -111,6 +122,10 @@ export default function Home() {
 					<Button onClick={() => {}}>Click Me</Button>
 					<Button onClick={() => {}}>Click Me</Button>
 				</ButtonGroup>
+			</StyledSection>
+			<StyledSection>
+				<h2>Icon</h2>
+				<Icon name="BxBell" size="xxl" color="blue" alt={"bell icon"} />
 			</StyledSection>
 		</>
 	);
